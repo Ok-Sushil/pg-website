@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Best PG in Noida | Sector 71 & 36A</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg,#e0f7fa,#f9f9fb);
+      color: #111827;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url('pg-banner.jpg') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center;
+    }
+    .overlay {
+      position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4));
+    }
+    .hero-content {
+      position: relative; z-index: 2; padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.6rem; margin: 0 0 10px; font-weight: 700;
+    }
+    .hero-content p {font-size: 1.2rem; margin: 0; opacity: 0.9;}
+
+    .details {
+      max-width: 1000px;
+      margin: -60px auto 0;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(135deg,#e0f2fe,#e6fffa);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card:hover {transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.15);}
+    .card h3 {margin-bottom: 10px; color:#0f766e;}
+
+    .form-section {
+      margin: 60px auto;
+      max-width: 600px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 40px;
+      text-align: center;
+    }
+    .form-section h2 {
+      color: #1d4ed8;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    form {text-align: left;}
+    label {display:block; margin:10px 0 6px; font-weight:600; color:#0f172a;}
+    input {
+      width:100%; padding:12px; border:1px solid #cbd5e1; border-radius:10px; font-size:15px;
+      margin-bottom:15px;
+    }
+    .btn {
+      width:100%; background: linear-gradient(90deg,#16a34a,#2563eb);
+      color:white; padding:14px; border:none; border-radius:10px;
+      font-size:16px; font-weight:600; cursor:pointer; transition:0.3s ease;
+      text-decoration:none; display:inline-block; text-align:center;
+    }
+    .btn:hover {transform: scale(1.03);}
+
+    footer {text-align:center; padding:30px; font-size:13px; color:#64748b; background:#f1f5f9;}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Find Your Perfect PG in Noida 🏠</h1>
+      <p>Comfortable • Affordable • With Delicious Meals</p>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="card">
+      <h3>📍 Location</h3>
+      <p>Sector 71 C Block (Boys) & Sector 36A Block (Girls), Noida</p>
+    </div>
+    <div class="card">
+      <h3>👫 For</h3>
+      <p>Boys & Girls Both</p>
+    </div>
+    <div class="card">
+      <h3>🏠 Room Options</h3>
+      <p>
+        Single — ₹20,000<br>
+        Double — ₹11,000<br>
+        Triple — ₹7,500<br>
+        Four Sharing — ₹6,000
+      </p>
+    </div>
+    <div class="card">
+      <h3>🍽 Meals</h3>
+      <p>Two-time homemade food included daily</p>
+    </div>
+    <div class="card">
+      <h3>💬 Info</h3>
+      <p>Comfortable stay with all basic facilities. For booking or more details, contact us below 👇</p>
+    </div>
+  </section>
+
+  <section class="form-section" id="contact">
+    <h2>Contact Us / Book Your Visit</h2>
+    <form id="leadForm">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" placeholder="e.g. Ravi Kumar" required>
+
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="tel" placeholder="10-digit number" pattern="[0-9]{10}" required>
+
+      <button type="submit" class="btn">Chat on WhatsApp</button>
+    </form>
+
+    <p style="margin-top:20px;font-weight:600;color:#0f172a;">Prefer talking? Call us directly 👇</p>
+    <a href="tel:7417366924" class="btn" style="background: linear-gradient(90deg,#22c55e,#3b82f6);">📞 Call Now: 7417366924</a>
+
+    <div id="status" style="margin-top:10px;font-size:14px;color:#334155"></div>
+  </section>
+
+  <footer>
+    © 2025 Best PG in Noida | All Rights Reserved
+  </footer>
+
+  <script>
+    const OWNER_WHATSAPP_NUMBER = "919876543210"; // Change to your number
+
+    const form = document.getElementById("leadForm");
+    const status = document.getElementById("status");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if (!name || !phone) {
+        status.textContent = "Please fill both fields.";
+        return;
+      }
+
+      const msg = encodeURIComponent(`Interested in PG — Name: ${name} | Phone: ${phone}`);
+      const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${msg}`;
+      window.open(waUrl, "_blank");
+      status.textContent = "Opening WhatsApp...";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
